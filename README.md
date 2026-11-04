@@ -31,12 +31,12 @@ assets/pokeneas/  imágenes que se suben al bucket (no van en la imagen Docker)
 ```bash
 npm install
 npm test
-IMAGES_BASE_URL=https://storage.googleapis.com/NOMBRE_DEL_BUCKET npm start
+IMAGES_BASE_URL=https://NOMBRE_DEL_BUCKET.s3.us-east-1.amazonaws.com npm start
 ```
 
 Variables de entorno:
 
-- `IMAGES_BASE_URL` (obligatoria): URL pública del bucket con las imágenes.
+- `IMAGES_BASE_URL` (obligatoria): URL pública del bucket S3 con las imágenes.
 - `PORT` (opcional): puerto de la aplicación, 3000 por defecto.
 
 ## Despliegue

@@ -2,7 +2,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const os = require('node:os');
 
-process.env.IMAGES_BASE_URL = 'https://storage.googleapis.com/bucket-prueba/';
+process.env.IMAGES_BASE_URL = 'https://bucket-prueba.s3.us-east-1.amazonaws.com/';
 
 const app = require('../src/app');
 const pokeneas = require('../src/data/pokeneas');
@@ -42,7 +42,7 @@ test('GET /pokenea muestra imagen del bucket, frase e id del contenedor', async 
   const html = await res.text();
 
   assert.equal(res.status, 200);
-  assert.match(html, /src="https:\/\/storage\.googleapis\.com\/bucket-prueba\/[a-z]+\.png"/);
+  assert.match(html, /src="https:\/\/bucket-prueba\.s3\.us-east-1\.amazonaws\.com\/[a-z]+\.png"/);
   assert.ok(html.includes(os.hostname()));
   assert.ok(pokeneas.some(({ imagen }) => html.includes(imagen)));
 });
