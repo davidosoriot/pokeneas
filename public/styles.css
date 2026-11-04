@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  box-sizing: border-box;
+  background: #14532d;
+  font-family: system-ui, sans-serif;
+  color: #1f2937;
+}
+
+.card {
+  max-width: 420px;
+  padding: 24px;
+  border-radius: 16px;
+  background: #fff;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+h1 {
+  margin: 16px 0 8px;
+}
+
+blockquote {
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.container {
+  margin: 0;
+  color: #4b5563;
+}
